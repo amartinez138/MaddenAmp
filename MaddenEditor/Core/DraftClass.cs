@@ -222,41 +222,7 @@ namespace MaddenEditor.Core
         public int Unknown18 = 0;
         public int Celebration = 0;
         public UInt16 Comment = 8191;   // Generic        
-        public int Unknown19 = 0;
-        public int Unknown20 = 0;
-        public int Unknown21 = 0;
-        public int Unknown22 = 0;
-        public int Unknown23 = 0;
-        public int Unknown24 = 0;
-
-        public int Unknown25 = 0;
-        public int Unknown26 = 0;
-        public int Unknown27 = 0;
-        public int Unknown28 = 0;
-        public int Unknown29 = 0;
-        public int Unknown30 = 0;
-        public int Unknown31 = 0;
-        public int Unknown32 = 0;
-        public int Unknown33 = 0;
-        public int Unknown34 = 0;
-
-        public int Unknown35 = 0;
-        public int Unknown36 = 0;
-        public int Unknown37 = 0;
-        public int Unknown38 = 0;
-        public int Unknown39 = 0;
-        public int Unknown40 = 0;
-        public int Unknown41 = 0;
-        public int Unknown42 = 0;
-        public int Unknown43 = 0;
-        public int Unknown44 = 0;
-
-        public int Unknown45 = 0;
-        public int Unknown46 = 0;
-        public int Unknown47 = 0;
-        public int Unknown48 = 0;
-        public int Unknown49 = 0;
-        public int Unknown50 = 0;
+        public string AssetPlayer = "";
         public int Unknown51 = 0;
         public int Unknown52 = 0;
         public int Unknown53 = 0;
@@ -585,7 +551,7 @@ namespace MaddenEditor.Core
 
             Unknown18 = binreader.ReadByte();            
             Celebration = binreader.ReadByte();
-            Comment = binreader.ReadUInt16();       //282-283    
+            Comment = binreader.ReadUInt16();       //282-283            
             
             #region Player Asset
             int assetlen = 32;
@@ -601,41 +567,6 @@ namespace MaddenEditor.Core
             AssetPlayer = enc4.GetString(bytename4.ToArray());
             #endregion
             
-            //Unknown19 = binreader.ReadByte();
-            //Unknown20 = binreader.ReadByte();
-            //Unknown21 = binreader.ReadByte();
-            //Unknown22 = binreader.ReadByte();
-            //Unknown23 = binreader.ReadByte();
-            //Unknown24 = binreader.ReadByte();
-
-            //Unknown25 = binreader.ReadByte();
-            //Unknown26 = binreader.ReadByte();
-            //Unknown27 = binreader.ReadByte();
-            //Unknown28 = binreader.ReadByte();
-            //Unknown29 = binreader.ReadByte();
-            //Unknown30 = binreader.ReadByte();
-            //Unknown31 = binreader.ReadByte();
-            //Unknown32 = binreader.ReadByte();
-            //Unknown33 = binreader.ReadByte();
-            //Unknown34 = binreader.ReadByte();
-
-            //Unknown35 = binreader.ReadByte();
-            //Unknown36 = binreader.ReadByte();
-            //Unknown37 = binreader.ReadByte();
-            //Unknown38 = binreader.ReadByte();
-            //Unknown39 = binreader.ReadByte();
-            //Unknown40 = binreader.ReadByte();
-            //Unknown41 = binreader.ReadByte();
-            //Unknown42 = binreader.ReadByte();
-            //Unknown43 = binreader.ReadByte();
-            //Unknown44 = binreader.ReadByte();
-
-            //Unknown45 = binreader.ReadByte();
-            //Unknown46 = binreader.ReadByte();
-            //Unknown47 = binreader.ReadByte();
-            //Unknown48 = binreader.ReadByte();
-            //Unknown49 = binreader.ReadByte();
-            //Unknown50 = binreader.ReadByte();
             Unknown51 = binreader.ReadByte();
             Unknown52 = binreader.ReadByte();
             Unknown53 = binreader.ReadByte();
@@ -870,7 +801,7 @@ namespace MaddenEditor.Core
             Unknown18 = binreader.ReadByte();      //287
             Celebration = binreader.ReadByte();    //288
             Comment = binreader.ReadUInt16();      //289-290
-            
+                        
             #region Player Asset
             int assetlen = 32;
 
@@ -884,39 +815,7 @@ namespace MaddenEditor.Core
             }
             AssetPlayer = enc4.GetString(bytename4.ToArray());
             #endregion
-            
-            //Unknown19 = binreader.ReadByte();      //291
-            //Unknown20 = binreader.ReadByte();      //292
-            //Unknown21 = binreader.ReadByte();      //293
-            //Unknown22 = binreader.ReadByte();      //294
-            //Unknown23 = binreader.ReadByte();      //295
-            //Unknown24 = binreader.ReadByte();      //296
-            //Unknown25 = binreader.ReadByte();      //297
-            //Unknown26 = binreader.ReadByte();      //298
-            //Unknown27 = binreader.ReadByte();      //299
-            //Unknown28 = binreader.ReadByte();      //300
-            //Unknown29 = binreader.ReadByte();      //301
-            //Unknown30 = binreader.ReadByte();      //302
-            //Unknown31 = binreader.ReadByte();      //303
-            //Unknown32 = binreader.ReadByte();      //304
-            //Unknown33 = binreader.ReadByte();      //305
-            //Unknown34 = binreader.ReadByte();      //306
-            //Unknown35 = binreader.ReadByte();      //307
-            //Unknown36 = binreader.ReadByte();      //308
-            //Unknown37 = binreader.ReadByte();      //309
-            //Unknown38 = binreader.ReadByte();      //310
-            //Unknown39 = binreader.ReadByte();      //311
-            //Unknown40 = binreader.ReadByte();      //312
-            //Unknown41 = binreader.ReadByte();      //313
-            //Unknown42 = binreader.ReadByte();      //314
-            //Unknown43 = binreader.ReadByte();      //315
-            //Unknown44 = binreader.ReadByte();      //316
-            //Unknown45 = binreader.ReadByte();      //317
-            //Unknown46 = binreader.ReadByte();      //318
-            //Unknown47 = binreader.ReadByte();      //319
-            //Unknown48 = binreader.ReadByte();      //320
-            //Unknown49 = binreader.ReadByte();      //321
-            //Unknown50 = binreader.ReadByte();      //322
+
             Unknown51 = binreader.ReadByte();      //323
             Unknown52 = binreader.ReadByte();      //324
             Unknown53 = binreader.ReadByte();      //325
@@ -1151,10 +1050,9 @@ namespace MaddenEditor.Core
             Unknown18 = binreader.ReadByte();      //287
             Celebration = binreader.ReadByte();    //288
             Comment = binreader.ReadUInt16();      //289-290
-            
-          #region Player Asset
-            int assetlen = 32;
 
+            #region Player Asset
+      
             ASCIIEncoding enc4 = new ASCIIEncoding();
             List<byte> bytename4 = new List<byte>();
             for (int c = 0; c < assetlen; c++)
@@ -1164,8 +1062,8 @@ namespace MaddenEditor.Core
                     bytename4.Add(b);
             }
             AssetPlayer = enc4.GetString(bytename4.ToArray());
-            #endregion  
-              
+            #endregion
+
             Unknown51 = binreader.ReadByte();      //323
             Unknown52 = binreader.ReadByte();      //324
             Unknown53 = binreader.ReadByte();      //325
@@ -1404,15 +1302,14 @@ namespace MaddenEditor.Core
             binwriter.Write((byte)Unknown18);
             binwriter.Write((byte)Celebration);
             binwriter.Write(Comment);
-            
+
             #region AssetPlayer
-            int assetlen = 32;
-            byte[] ascii3 = System.Text.Encoding.ASCII.GetBytes(AssetPlayer);
-            byte[] ph = System.Text.Encoding.ASCII.GetBytes(AssetPlayer);
-            for (int c = 0; c < assetlen; c++)
+            byte[] ascii4 = System.Text.Encoding.ASCII.GetBytes(AssetPlayer);
+            byte[] ph2 = System.Text.Encoding.ASCII.GetBytes(AssetPlayer);
+            for (int c = 0; c < 32; c++)
             {
-                if (c < ascii3.Length)
-                    binwriter.Write(ascii3[c]);
+                if (c < ascii4.Length)
+                    binwriter.Write(ascii4[c]);
                 else binwriter.Write((byte)0);
             }
             #endregion
@@ -2577,7 +2474,7 @@ namespace MaddenEditor.Core
             RatingDefs.Add("U16", "Unknown16");
             RatingDefs.Add("U17", "Unknown17");
             RatingDefs.Add("U18", "Unknown18");
-            
+
             RatingDefs.Add("PEPS", "Player Asset");
 
             RatingDefs.Add("U51", "Unknown51");
@@ -2735,6 +2632,26 @@ namespace MaddenEditor.Core
 
             wText.WriteLine(hbuilder.ToString());
         }
+
+        /*public DraftReport OutputDraftClassStats()
+        {
+            return new DraftReport()
+            {
+                HighestRated = draftclassplayers.OrderByDescending(d => d.Overall).First().Overall,
+                LowestRated = draftclassplayers.OrderBy(d => d.Overall).First().Overall,
+                Ovr80plus = draftclassplayers.Where(d => d.Overall >= 80).Count(),
+                Ovr70to79 = draftclassplayers.Where(d => d.Overall >= 70 && d.Overall < 80).Count(),
+                Ovr60to69 = draftclassplayers.Where(d => d.Overall >= 60 && d.Overall < 70).Count(),
+                Ovr50to59 = draftclassplayers.Where(d => d.Overall >= 50 && d.Overall < 60).Count(),
+                Ovr40to49 = draftclassplayers.Where(d => d.Overall >= 40 && d.Overall < 50).Count(),
+                OvrSub40 = draftclassplayers.Where(d => d.Overall < 40).Count(),
+                XFactors = draftclassplayers.Where(d => d.Development == 3).Count(),
+                Superstars = draftclassplayers.Where(d => d.Development == 2).Count(),
+                Stars = draftclassplayers.Where(d => d.Development == 1).Count(),
+                Normals = draftclassplayers.Where(d => d.Development == 0).Count(),
+                DraftSize = draftclassplayers.Count()
+            };
+        } */
 
         public void ImportCSVDraftClass(List<string> records, string[] fields)
         {
